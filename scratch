@@ -13,6 +13,12 @@ Eratosthenes(n) {
   return(a)
 }
 
+Starting with index 2 for array a to index n, set array a[i] = 1
+
+1/ For numbers less than n, square p starting with p=2. 
+2/ Set j=p^2. For numbers j less than n, remove that number.
+3/ Repeat this procedure until array[p] == 1.
+
 Eratosthenes(10)
 // 2,3,5,7
 
