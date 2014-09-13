@@ -8,7 +8,7 @@
 -- x: square(x)+0x, square(x)+1x, square(x)+2x, square(x)+3x, square(x)+4x..
 -- 3: 3*3=9, 3*3+3=12
 
--- primesTo n = [x|x <- [2..n], (sieve n) < n]
+primesTo n = [x|x <- [2..n], x `notElem` (sieve n)]
 
 sieve n = [(square x) + (y * x)|x <- [2..n], y <- [0..n], (square x) + (y * x) < n]
 
