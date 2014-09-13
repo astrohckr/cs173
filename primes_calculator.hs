@@ -8,9 +8,9 @@
 -- x: square(x)+0x, square(x)+1x, square(x)+2x, square(x)+3x, square(x)+4x..
 -- 3: 3*3=9, 3*3+3=12
 
-primesTo n = [x|x <- [2..n], (square x) < n]
+-- primesTo n = [x|x <- [2..n], (sieve n) < n]
 
-sieve n = [(square x) + ax|x <- [2..n], a <- [0..n]]
+sieve n = [(square x) + (y * x)|x <- [2..n], y <- [0..n], (square x) + (y * x) < n]
 
 square :: Int -> Int
 square x = (*) x x
