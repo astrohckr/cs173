@@ -10,7 +10,7 @@
 
 primesTo n = [x|x <- [2..n], x `notElem` (sieve n)]
 
-sieve n = [(square x) + (y * x)|x <- [2..n], y <- [0..n], (square x) + (y * x) < n]
+sieve n = [(square x) + (y * x)|x <- [2..n], y <- [0..n], (square x) + (y * x) <= n]
 
 square :: Int -> Int
 square x = (*) x x
