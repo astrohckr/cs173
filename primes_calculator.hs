@@ -10,7 +10,7 @@
 
 primesTo n = [x|x <- [2..n], (square x) < n]
 
-sieve xs = (square x)
+sieve n = [(square x) + ax|x <- [2..n], a <- [0..n]]
 
 square :: Int -> Int
 square x = (*) x x
