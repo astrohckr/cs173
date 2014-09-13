@@ -8,9 +8,7 @@ greatestCommonDivisor x y = if (remainder a b) == 0
                               b = (min x y)
                             
 absoluteValue :: Int -> Int
-absoluteValue n = if n > 0
-                    then n
-                    else (n)*(-1)
+absoluteValue n = if n > 0 then n else (n)*(-1)
 
 remainder :: Int -> Int -> Int
 remainder a b = a `mod` b
