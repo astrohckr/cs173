@@ -7,7 +7,8 @@
 -- 2: 2*2=4, 2*2+2=6, 2*2+2(2)=8, 2*2+3(2)=10, 2*2+4(2)=12, 2*2+5(2)=14
 -- 3: 3*3=9, 3*3+3=12
 
--- Note: This isn't yet quite as fast as I'd like.
+-- Note: This isn't yet quite as fast as I'd like. I'm a Haskell noob, so bear with me.
+-- The problem with this is that there are still two huge lists being evaluated.
 primesTo n = [x|x <- [2..n], x `notElem` (sieve n)]
 
 -- x: square(x)+0x, square(x)+1x, square(x)+2x, square(x)+3x, square(x)+4x..
