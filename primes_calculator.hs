@@ -9,7 +9,7 @@
 
 -- Note: This isn't yet quite as fast as I'd like. I'm a Haskell noob, so bear with me.
 -- The problem with this is that there are still two huge lists being evaluated.
--- The sieve itself is quite fast.
+-- The sieve itself is fast.
 primesTo n = [x|x <- [2..n], x `notElem` (sieve n)]
 
 -- x: square(x)+0x, square(x)+1x, square(x)+2x, square(x)+3x, square(x)+4x..
