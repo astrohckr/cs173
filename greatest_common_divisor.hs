@@ -13,3 +13,7 @@ absoluteValue n = if n > 0 then n else (n)*(-1)
 
 remainder :: Int -> Int -> Int
 remainder a b = a `mod` b
+
+leastCommonMultiple x y = absoluteValue (x * y) `div` (greatestCommonDivisor x y)
+
+                              
