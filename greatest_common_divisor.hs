@@ -7,6 +7,10 @@ greatestCommonDivisor x y = if (remainder a b) == 0
                             where
                               a = absoluteValue (max x y)
                               b = absoluteValue (min x y)
+
+--- Calculates the least common multiple of two integers
+leastCommonMultiple :: Int -> Int -> Int
+leastCommonMultiple x y = absoluteValue (x * y) `div` (greatestCommonDivisor x y)
                             
 absoluteValue :: Int -> Int
 absoluteValue n = if n > 0 then n else (n)*(-1)
@@ -14,6 +18,6 @@ absoluteValue n = if n > 0 then n else (n)*(-1)
 remainder :: Int -> Int -> Int
 remainder a b = a `mod` b
 
-leastCommonMultiple x y = absoluteValue (x * y) `div` (greatestCommonDivisor x y)
+
 
                               
